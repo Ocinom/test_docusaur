@@ -66,11 +66,11 @@ const config: Config = {
 
   themeConfig: {
     // Replace with your project's social card
-    // algolia: {
-    //     appId: process.env.ALGOLIA_APP_ID,
-    //     apiKey: process.env.ALGOLIA_SEARCH_API_KEY,
-    //     indexName: 'self',
-    // },
+    algolia: {
+        appId: process.env.ALGOLIA_APP_ID,
+        apiKey: process.env.ALGOLIA_SEARCH_API_KEY,
+        indexName: 'self',
+    },
     image: 'img/docusaurus-social-card.jpg',
     navbar: {
       title: 'My Site',
