@@ -16,4 +16,11 @@ jobs:
     name: foo
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - name: checkout
+        uses: actions/checkout@v4
+
+      - name: prepare envs
+        run: |
+          echo ALGOLIA_APP_ID=${ALGOLIA_APP_ID} >> .dev.vars
+          echo ALGOLIA_SEARCH_API_KEY=${ALGOLIA_SEARCH_API_KEY} >> .dev.vars
+          echo ALGOLIA_WRITE_API_KEY=${ALGOLIA_WRITE_API_KEY} >> .dev.vars
